@@ -15,3 +15,4 @@ alias cls='clear'
 alias yta='yt-dlp -f bestaudio[ext=m4a] --add-metadata --embed-thumbnail -o "%(title)s.%(ext)s'
 alias cfnv='nvim ~/.config/nvim/init.vim'
 alias wget="wget --hsts-file=\"$XDG_CACHE_HOME/wget-hsts\""
+alias cd='z'

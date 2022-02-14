@@ -194,3 +194,6 @@ export NVM_DIR="$HOME/.config/nvm"
 ## Load Starship
 export STARSHIP_DISTRO="$ICON "
 eval "$(starship init zsh)"
+
+## z
+eval "$(zoxide init zsh)"
