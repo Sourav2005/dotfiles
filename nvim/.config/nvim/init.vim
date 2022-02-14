@@ -25,12 +25,16 @@ set noshowmode
 set updatetime=250
 set encoding=UTF-8
 set mouse=a
-set bg=light
 set cmdheight=1
 set shortmess+=c
 set showtabline=2
 set colorcolumn=80
+set bg=dark
+set cursorline
 filetype plugin indent on
+if has('termguicolors')
+    set termguicolors
+endif
 
 let mapleader = " "
 nnoremap <leader>v :e $MYVIMRC<CR>
@@ -55,6 +59,9 @@ Plug 'kassio/neoterm'
 Plug 'tpope/vim-commentary'
 Plug '9mm/vim-closer'
 Plug 'tweekmonster/startuptime.vim'
+Plug 'lunarvim/colorschemes'
+Plug 'itchyny/lightline.vim'
+Plug 'itchyny/vim-gitbranch'
 call plug#end()
 
 " vim-maximizer
@@ -73,3 +80,18 @@ vnoremap <leader>x :TREPLSendSelection<CR>
 if has('nvim')
   au! TermOpen * tnoremap <buffer> <Esc> <c-\><c-n>
 endif
+
+" colorscheme
+colorscheme onedarker
+
+" lightline
+let g:lightline = {
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'gitbranch#name'
+      \ },
+      \ 'colorscheme': 'one',
+      \ }
