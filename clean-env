@@ -1,0 +1,10 @@
+#!/bin/sh
+
+dotfiles=~/.dotfiles
+
+pushd $dotfiles
+for folder in *; do
+    if [ -d $folder ]; then
+        stow -D $folder
+    fi
+done
