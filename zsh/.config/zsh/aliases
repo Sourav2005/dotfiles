@@ -1,0 +1,15 @@
+#!/bin/sh
+
+alias ls='ls --color=auto --group-directories-first'
+alias la='ls -a --color=auto --group-directories-first'
+alias ll='ls -al --color=auto --group-directories-first'
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias cat='bat -pp'
+alias cp="cp -v"
+alias mv='mv -v'
+alias rm='rm -v'
+alias v='nvim'
+alias cls='clear'
+alias yta='yt-dlp -f bestaudio[ext=m4a] --add-metadata --embed-thumbnail -o "%(title)s.%(ext)s'

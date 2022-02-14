@@ -1,0 +1,16 @@
+#!/bin/sh
+
+
+dotfiles=~/.dotfiles
+
+# Remove original files
+rm -rf ~/.bash*
+
+# stow all folders
+pushd $dotfiles
+for folder in *; do
+	if [ -d $folder ]; then
+		stow -D $folder
+		stow -v $folder
+	fi
+done
