@@ -68,17 +68,16 @@ zle -N zle-line-init
 echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
-# Use lf to switch directories and bind it to ctrl-o
-lfcd () {
-    tmp="$(mktemp)"
-    lf -last-dir-path="$tmp" "$@"
-    if [ -f "$tmp" ]; then
-        dir="$(cat "$tmp")"
-        rm -f "$tmp" >/dev/null
-        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
-    fi
+# Use ranger to switch directories and bind it to ctrl-o
+
+rangercd () {
+    echo
+    ranger --choosedir=$XDG_CACHE_HOME/.rangerdir < $TTY
+    LASTDIR="$(< $XDG_CACHE_HOME/.rangerdir)"
+    cd "$LASTDIR"
 }
-bindkey -s '^o' 'lfcd\n'
+
+bindkey -s '^o' 'rangercd\n'
 bindkey -s '^a' 'bc -lq\n'
 bindkey -s '^f' 'cd "$(dirname "$(fzf)")"\n'
 
