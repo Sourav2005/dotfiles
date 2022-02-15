@@ -62,6 +62,7 @@ Plug 'tweekmonster/startuptime.vim'
 Plug 'lunarvim/colorschemes'
 Plug 'itchyny/lightline.vim'
 Plug 'itchyny/vim-gitbranch'
+Plug 'tomasiser/vim-code-dark'
 call plug#end()
 
 " vim-maximizer
@@ -82,7 +83,7 @@ if has('nvim')
 endif
 
 " colorscheme
-colorscheme onedarker
+colorscheme codedark
 
 " lightline
 let g:lightline = {
@@ -93,5 +94,5 @@ let g:lightline = {
       \ 'component_function': {
       \   'gitbranch': 'gitbranch#name'
       \ },
-      \ 'colorscheme': 'one',
+      \ 'colorscheme': 'codedark',
       \ }
