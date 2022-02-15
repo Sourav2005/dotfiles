@@ -4,10 +4,11 @@
 dotfiles=~/.dotfiles
 
 # Remove original files
-rm -rf ~/.bash*
+find ~ -maxdepth 1 -type f -iname ".bash*" -exec rm {} \;
 
 # stow all folders
-pushd $dotfiles
+pushd $dotfiles || exit 1
+mkdir -p ~/.config # To prevent stow from creating .config as a symlink
 for folder in *; do
 	if [ -d $folder ]; then
 		stow -D $folder

@@ -2,7 +2,7 @@
 
 dotfiles=~/.dotfiles
 
-pushd $dotfiles
+pushd $dotfiles || exit 1
 for folder in *; do
     if [ -d $folder ]; then
         stow -vD $folder
