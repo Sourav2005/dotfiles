@@ -44,7 +44,7 @@ ex ()
   fi
 }
 
-### ALIASES
+### Aliases
 
 source ~/.config/zsh/aliases
 
@@ -55,4 +55,5 @@ export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-eval "$(zoxide init bash)"
+eval "$(zoxide init bash)" # z - a smarter alternative to cd
+eval "$(starship init bash)" # starship prompt

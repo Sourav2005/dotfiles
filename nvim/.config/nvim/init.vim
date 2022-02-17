@@ -66,7 +66,7 @@ Plug 'tomasiser/vim-code-dark'
 call plug#end()
 
 " vim-maximizer
-nnoremap <leader>m :MaximizerToggle!<CR>
+nnoremap <C-m> :MaximizerToggle!<CR>
 
 " neoterm
 let g:neoterm_default_mod = 'vertical'
@@ -83,7 +83,7 @@ if has('nvim')
 endif
 
 " colorscheme
-colorscheme codedark
+colorscheme onedarker
 
 " lightline
 let g:lightline = {
@@ -94,5 +94,5 @@ let g:lightline = {
       \ 'component_function': {
       \   'gitbranch': 'gitbranch#name'
       \ },
-      \ 'colorscheme': 'codedark',
+      \ 'colorscheme': 'one',
       \ }

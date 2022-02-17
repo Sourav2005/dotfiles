@@ -31,8 +31,8 @@ export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 export SCREENRC="$XDG_CONFIG_HOME"/screen/screenrc
 export WGETRC="$XDG_CONFIG_HOME/wgetrc"
 export _Z_DATA="$XDG_DATA_HOME/z"
-export EDITOR="vim"
-export VISUAL="vim"
+export EDITOR="nvim"
+export VISUAL="nvim"
 
 ## WSL
 # export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
