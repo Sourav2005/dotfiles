@@ -43,3 +43,13 @@ au VimLeave,VimSuspend * set guicursor=a:ver90-blinkon1
 inoremap <C-v> <ESC>"+pa
 vnoremap <C-c> "+y
 vnoremap <C-d> "+d
+
+" splits navigation
+noremap <C-h> <C-w>h 
+noremap <C-j> <C-w>j 
+noremap <C-k> <C-w>k 
+noremap <C-l> <C-w>l 
+
+" tab navigation
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
