@@ -6,7 +6,6 @@
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
-alias cat='bat -pp'
 alias cp="cp -v"
 alias mv='mv -v'
 alias rm='rm -v'
@@ -15,11 +14,10 @@ alias cls='clear'
 alias yta='yt-dlp -f bestaudio[ext=m4a] --add-metadata --embed-thumbnail -o "%(title)s.%(ext)s'
 alias cfnv='nvim ~/.config/nvim/init.vim'
 alias wget="wget --hsts-file=\"$XDG_CACHE_HOME/wget-hsts\""
-alias cd='z'
-alias l='lsd -ah --group-dirs first'
-alias ls='lsd -ah --group-dirs first'
-alias la='lsd -ah --group-dirs first'
-alias ll='lsd -alh --group-dirs first'
+alias l='ls -ah --group-directories-first'
+alias ls='ls -ah --group-directories-first'
+alias la='ls -ah --group-directories-first'
+alias ll='ls -alh --group-directories-first'
 alias srczsh="source $ZDOTDIR/.zshrc"
 alias f='ranger'
 alias vim='nvim'
