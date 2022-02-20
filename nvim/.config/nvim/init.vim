@@ -57,7 +57,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'szw/vim-maximizer'
 Plug 'kassio/neoterm'
 Plug 'tpope/vim-commentary'
-Plug '9mm/vim-closer'
+"Plug '9mm/vim-closer'
 Plug 'tweekmonster/startuptime.vim'
 Plug 'lunarvim/colorschemes'
 Plug 'itchyny/lightline.vim'
